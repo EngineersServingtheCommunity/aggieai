@@ -55,3 +55,14 @@ Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/
 ---
 
 <sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+
+
+
+
+
+create a file called .env inside the aggieai-server folder, copy this code: (DO NOT DO THIS FOR ANY OTHER PROJECTS THAT REQUIRE SECURITY, VERY VERY BAD PRACTICE)
+APP_KEYS=LcBEHrcpBUr/w/tRvBC6og==,i+0nYz21dZEzvQIi/33mnw==,yB7CR7TUTH5rga3PZihksQ==,WXq99sBOWZWzrZgUe0iVvg==
+API_TOKEN_SALT=t6X+55/VKvL2wQUtfMHquA==
+ADMIN_JWT_SECRET=z0l1fmOA/nmQnQgy1Ej5Sg==
+JWT_SECRET=PC2N9ekQTPw+jH+8J0+qRw==
+

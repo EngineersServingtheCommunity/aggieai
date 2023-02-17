@@ -2,7 +2,11 @@
 
 function About() {
   return (
-    <p>About page</p>
+    <div>
+      <p>About page</p>
+      <button onClick={()=>navigate('classes')}>Go to Classes page</button>
+    </div>
+    
   );
 }
 

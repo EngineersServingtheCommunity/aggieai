@@ -1,19 +1,27 @@
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import './Classes.css';
+import Navbar from '../components/Navbar.js'
 
 function Classes() {
     const navigate = useNavigate();
 
 
     return (
-        <body>
+        <div>
+            <div>
+                <Navbar/>
+            </div>
             <p>
                 Here are the classes
             </p>
-            {/*Hello
-            <button onClick={()=>navigate('about')}>Go to about page</button>
-            */}
-        </body>
+
+
+
+
+            <button onClick={()=>navigate('../about')}>Go to about page</button>
+
+        </div>
             
     );
 }

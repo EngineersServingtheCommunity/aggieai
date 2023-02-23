@@ -1,15 +1,15 @@
 import { useNavigate } from "react-router-dom";
 
-function About() {
+function Login() {
   const navigate = useNavigate();
   
   return (
     <div>
-      <p>About page</p>
+      <p>Login page</p>
       <button onClick={()=>navigate('../classes')}>Go to Classes page</button>
     </div>
     
   );
 }
 
-export default About;
+export default Login;

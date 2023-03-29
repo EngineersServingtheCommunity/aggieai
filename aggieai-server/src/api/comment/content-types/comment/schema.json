@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "comments",
+  "info": {
+    "singularName": "comment",
+    "pluralName": "comments",
+    "displayName": "comment"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "author": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "created": {
+      "type": "date"
+    },
+    "votes": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "rating": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::rating.rating",
+      "inversedBy": "comments"
+    }
+  }
+}

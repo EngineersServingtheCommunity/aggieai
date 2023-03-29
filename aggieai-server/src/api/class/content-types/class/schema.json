@@ -13,19 +13,34 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "description": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "rating": {
-      "type": "decimal"
+      "type": "decimal",
+      "required": true,
+      "max": 10,
+      "min": 1,
+      "default": 1
     },
     "ratings": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::rating.rating",
       "mappedBy": "class"
+    },
+    "credits": {
+      "type": "integer",
+      "required": true
+    },
+    "has_lab": {
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   }
 }

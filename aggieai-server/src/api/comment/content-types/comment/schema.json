@@ -4,7 +4,8 @@
   "info": {
     "singularName": "comment",
     "pluralName": "comments",
-    "displayName": "comment"
+    "displayName": "comment",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,9 +20,6 @@
       "type": "string",
       "required": true
     },
-    "created": {
-      "type": "date"
-    },
     "votes": {
       "type": "integer",
       "required": true,
@@ -31,6 +29,12 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::rating.rating",
+      "inversedBy": "comments"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
       "inversedBy": "comments"
     }
   }

@@ -8,3 +8,8 @@ div{
     background-color: black;
     width: 100%;
 }
+
+#thing{
+    margin-top: 10px;
+    margin-inline: 50px;
+}

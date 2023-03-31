@@ -16,6 +16,7 @@ function Classes() {
     useEffect(() => {
         axios.get(baseURL)
         .then((response) => {
+            console.log(response)
             setContent(response.data);
         })
         .catch(error => console.log(error));

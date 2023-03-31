@@ -62,3 +62,12 @@ label {
     height: 25px;
     font-size: 15px;
 }
+
+#submit input {
+    background-color: #0D8D29;
+    border-radius: 5px;
+    border-color: black;
+    width: 100px;
+    height: 25px;
+    font-size: 15px;
+}

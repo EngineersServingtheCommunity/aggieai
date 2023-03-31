@@ -4,7 +4,8 @@
   "info": {
     "singularName": "class",
     "pluralName": "classes",
-    "displayName": "class"
+    "displayName": "class",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,7 +13,34 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "rating": {
+      "type": "decimal",
+      "required": true,
+      "max": 10,
+      "min": 1,
+      "default": 1
+    },
+    "ratings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::rating.rating",
+      "mappedBy": "class"
+    },
+    "credits": {
+      "type": "integer",
+      "required": true
+    },
+    "has_lab": {
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   }
 }

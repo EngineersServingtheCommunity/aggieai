@@ -3,20 +3,22 @@ import {useState} from 'react';
 import './writeReview.css'
 import axios from 'axios';
 
-const baseURL = 'http://localhost:1337/api/comments'
+const baseURL = 'http://localhost:1337/api/ratings'
 
 const WriteReview = () => {
     const [review, setReview] = useState('');
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        alert(`The post you entered was: ${review}`);
         axios.post(baseURL, 
             {
                 "data": {
                     author: 'general user',
-                    text: review,
-                    votes: 1,
+                    email: 'b@tamu.edu',
+                    review: review,
+                    rating: 3,
+                    professor: 'Dr.Rahm',
+                    votes: 5,
                 }
             }
         )

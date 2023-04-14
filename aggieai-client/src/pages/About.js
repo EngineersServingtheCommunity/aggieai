@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import React from 'react'
+import NavBar from "../components/Navbar.js";
 
 function About() {
   const navigate = useNavigate();
@@ -7,7 +8,7 @@ function About() {
   return (
     <div>
       <div>
-        <Navbar/>
+        <NavBar/>
       </div>
       <p>About page</p>
       <button onClick={()=>navigate('../classes')}>Go to Classes page</button>

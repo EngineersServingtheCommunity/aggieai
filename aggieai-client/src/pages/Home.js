@@ -1,9 +1,13 @@
 import React, {useState, useEffect } from 'react'
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
+
 import './Home.css';
+import 'react-select-search/style.css'
 
 import Select from 'react-select';
+import SelectSearch from 'react-select-search';
+
 
 const classURL  ='http://localhost:1337/api/classes'
 
@@ -26,12 +30,12 @@ function Home() {
     
     if (!classList) return <div><p>nothing found</p></div>;
 
-    const classOptions = classList.map((obj) => ({value: obj.attributes.name, label: obj.attributes.name}));
+    const classOptions = classList.map((obj) => ({name: obj.attributes.name, value: obj.attributes.name}));
 
     console.log(classOptions)
 
     return (
-        <div>
+        <>
 
             <title>Aggie AI</title>
             <link rel="stylesheet" href="https://use.typekit.net/nbf0pnf.css" />
@@ -51,19 +55,10 @@ function Home() {
                 Find your courses within the Aggie community <br />
                 system that has been through it all.
             </p>
-            <Select
-                className="basic-single"
-                classNamePrefix="select"
-                defaultValue={classOptions[0]}
-                isDisabled={false}
-                isLoading={false}
-                isClearable={true}
-                isRtl={false}
-                isSearchable={true}
-                name="classes"
-                options={classOptions}
-            />
-        </div>
+            <div id="search_div">
+                <SelectSearch options={classOptions} placeholder="Search for a class" search="true" />
+            </div>
+        </>
     );
 }
 
